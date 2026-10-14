@@ -1,5 +1,5 @@
 def get_discounted_price(price):
-    return price
+    return price * 0.80
 
 def calculate_tax(price):
     return price * 0.18
