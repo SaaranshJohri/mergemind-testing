@@ -6,5 +6,5 @@ def calculate_tax(price):
 
 def checkout(price):
     discounted = get_discounted_price(price)
-    tax = calculate_tax(discounted)
+    tax = calculate_tax(price)
     return discounted + tax
