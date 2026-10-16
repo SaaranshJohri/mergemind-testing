@@ -1,14 +1,18 @@
 
-TAX_RATE = 0.20
+def calculate_discount(price):
+    return price * 0.10
 
 
-def calculate_tax(amount):
-    return amount * TAX_RATE
+def calculate_shipping(weight):
+    return weight * 8
 
 
 def main():
-    amount = 1000
-    print("Tax:", calculate_tax(amount))
+    price = 1000
+    weight = 2
+
+    print("Discount:", calculate_discount(price))
+    print("Shipping:", calculate_shipping(weight))
 
 
 if __name__ == "__main__":
