@@ -1,18 +1,20 @@
 
-def calculate_discount(price):
-    return price * 0.15
+TAX_RATE = 0.10
 
 
-def calculate_shipping(weight):
-    return weight * 5
+def calculate_discounted_price(price):
+    discount = price * 0.20
+    return price - discount
+
+
+def checkout(price):
+    discounted_price = calculate_discounted_price(price)
+    tax = discounted_price * TAX_RATE
+    return discounted_price + tax
 
 
 def main():
-    price = 1000
-    weight = 2
-
-    print("Discount:", calculate_discount(price))
-    print("Shipping:", calculate_shipping(weight))
+    print("Final price:", checkout(1000))
 
 
 if __name__ == "__main__":
